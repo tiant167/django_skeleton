@@ -19,8 +19,7 @@ from django.contrib import admin
 from articles import views as article_views
 from activity import views as activity_views
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^w/', admin.site.urls),
     url(r'^api/article/(\d+)/', article_views.ArticleDetail.as_view()),
     url(r'^api/article/list/(\w+)/', article_views.ArticleList.as_view()),
     url(r'^api/activity/(\d+)/', activity_views.ActivityDetail.as_view()),
