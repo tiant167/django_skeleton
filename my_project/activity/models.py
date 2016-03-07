@@ -25,8 +25,8 @@ class Activity(BaseModel):
 
 class ActivityFlow(BaseModel):
     activity = models.ForeignKey(Activity)
-    start_time = models.CharField(max_length=200, verbose_name=u'开始时间')
-    end_time = models.CharField(max_length=200, verbose_name=u'结束时间')
+    start_time = models.TimeField(verbose_name=u'开始时间')
+    end_time = models.TimeField(verbose_name=u'结束时间')
     description = models.CharField(max_length=200, verbose_name=u'流程说明')
 
     class Meta:
