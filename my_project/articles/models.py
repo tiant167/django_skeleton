@@ -20,4 +20,4 @@ class Articles(BaseModel):
 
     class Meta:
         verbose_name = u'文章'
-        verbose_name_plural = u'若干文章'
+        verbose_name_plural = u'文章'

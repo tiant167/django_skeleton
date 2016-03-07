@@ -15,12 +15,12 @@ class Activity(BaseModel):
     main_organizer = models.CharField(max_length=200, verbose_name=u'主办单位')
     union_organizer = models.CharField(max_length=200, verbose_name=u'联合主办')
     partner = models.CharField(max_length=200, verbose_name=u'合作伙伴')
-    activity_time = models.CharField(max_length=200, verbose_name=u'活动时间')
+    activity_time = models.DateTimeField(verbose_name=u'活动时间')
     location = models.CharField(max_length=200, verbose_name=u'活动地点')
 
     class Meta:
         verbose_name = u'活动'
-        verbose_name_plural = u'若干活动'
+        verbose_name_plural = u'活动'
 
 
 class ActivityFlow(BaseModel):
@@ -31,4 +31,4 @@ class ActivityFlow(BaseModel):
 
     class Meta:
         verbose_name = u'流程'
-        verbose_name_plural = u'若干流程'
+        verbose_name_plural = u'流程'
