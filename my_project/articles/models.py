@@ -10,7 +10,8 @@ from base.models import BaseModel
 class Articles(BaseModel):
     TYPE_CHOICE = (
         ('CYHW', u'创业好文'),
-        ('CYKT', u'创业课堂')
+        ('CYKT', u'创业课堂'),
+        ('TSGJ', u'谈古说今')
     )
     title = models.CharField(max_length=200, verbose_name=u'标题')
     description = models.TextField(verbose_name=u'简述')

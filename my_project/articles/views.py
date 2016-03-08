@@ -15,7 +15,7 @@ class ArticleList(BaseView):
     def get(self, request, article_type):
         '''
         /api/article/list/{type}/?start=0&num=20
-        type: all, CYHW, CYKT (大小写无所谓)
+        type: all, CYHW, CYKT, TSGJ (大小写无所谓)
         '''
         query = request.query_params
         start = query.get('start', 0)
@@ -25,7 +25,7 @@ class ArticleList(BaseView):
         if num < 0:
             num = 20
         article_type = article_type.upper()
-        if article_type not in ('CYHW', 'CYKT'):
+        if article_type not in ('CYHW', 'CYKT', 'TSGJ'):
             article_type = None
         # None == all
         q = Articles.objects.all()
