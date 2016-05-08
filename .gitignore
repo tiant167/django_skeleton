@@ -1,1 +1,3 @@
 *.pyc
+my_project/static
+db.sqlite3
