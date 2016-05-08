@@ -12,6 +12,7 @@ Payload:
 ```
 
 source: BAR, KTV
+
 amount:
-    BAR -> three, six+
-    KTV -> six, twelve+
+- BAR -> three, six+
+- KTV -> six, twelve+
